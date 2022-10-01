@@ -34,8 +34,8 @@ class YOLODataset(Dataset):
         return len(self.annotations)
 
     def __getitem__(self, index):
-        label_dir = "/content/drive/MyDrive/Dataset/labels"
-        image_dir = "/content/drive/MyDrive/Dataset/images"
+        label_dir = self.annotations.iloc[index, 2]
+        image_dir = self.annotations.iloc[index, 0
         label_path = os.path.join(label_dir, self.annotations.iloc[index, 3])
         bboxes = np.loadtxt(fname=label_path, delimiter=",", ndmin=2).tolist()
         img_path = os.path.join(image_dir, self.annotations.iloc[index, 1])
