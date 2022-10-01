@@ -229,9 +229,9 @@ class YOLOV5(nn.Module):
         return outputs
 
 
-if __name__ == "__main__":
-    model = YOLOV5(in_channels=3, num_classes=6)
-    summary(model, [3, 640, 640])
+# if __name__ == "__main__":
+    # model = YOLOV5(in_channels=3, num_classes=6)
+    # summary(model, [3, 640, 640])
 
     # x = torch.rand([2, 3, 640, 640])
     # out = model(x)
